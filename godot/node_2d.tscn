@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://lh24db5ohy2w"]
+
+[sub_resource type="TestVideoStream" id="TestVideoStream_rlsa2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -344.0
+offset_top = -194.0
+offset_right = 411.0
+offset_bottom = 221.0
+stream = SubResource("TestVideoStream_rlsa2")
+autoplay = true
+loop = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
