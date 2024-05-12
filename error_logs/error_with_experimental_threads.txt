@@ -1,0 +1,104 @@
+$ RUST_BACKTRACE=full ./godot_run.sh
+
+Initialize godot-rust (API v4.2.2.stable.official, runtime v4.2.2.stable.official)
+Godot Engine v4.2.2.stable.official.15073afe3 - https://godotengine.org
+Vulkan API 1.2.231 - Forward+ - Using Vulkan Device #0: Apple - Apple M1
+
+2024-05-12 20:34:00.036 Godot[75597:2724892] WARNING: AVCaptureDeviceTypeExternal is deprecated for Continuity Cameras. Please use AVCaptureDeviceTypeContinuityCamera and add NSCameraUseContinuityCameraDeviceType to your Info.plist.
+TestVideoStream init
+TestVideoStream instantiate_playback
+TestVideoStreamPlayback init
+TestVideoStreamPlayback get_texture
+TestVideoStreamPlayback update / pos: 0.0
+TestVideoStreamPlayback update / pos: 0.0
+TestVideoStreamPlayback update / pos: 0.002825999999999995
+TestVideoStreamPlayback update / pos: 0.0033570000000000544
+TestVideoStreamPlayback update / pos: 0.004964999999999886
+TestVideoStreamPlayback update / pos: 0.00569200000000003
+TestVideoStreamPlayback update / pos: 0.005803000000000003
+TestVideoStreamPlayback update / pos: 0.008046999999999915
+TestVideoStreamPlayback update / pos: 0.027854000000000045
+TestVideoStreamPlayback update / pos: 0.054391999999999996
+TestVideoStreamPlayback update / pos: 0.05823999999999985
+TestVideoStreamPlayback update / pos: 0.07442499999999996
+TestVideoStreamPlayback update / pos: 0.09088300000000005
+TestVideoStreamPlayback update / pos: 0.10907599999999995
+TestVideoStreamPlayback update / pos: 0.12440399999999996
+TestVideoStreamPlayback update / pos: 0.16993900000000006
+TestVideoStreamPlayback update / pos: 0.17017400000000005
+TestVideoStreamPlayback update / pos: 0.17323200000000005
+TestVideoStreamPlayback update / pos: 0.19027299999999991
+TestVideoStreamPlayback update / pos: 0.2069319999999999
+TestVideoStreamPlayback update / pos: 0.22389199999999998
+TestVideoStreamPlayback update / pos: 0.24069999999999991
+TestVideoStreamPlayback update / pos: 0.2579259999999999
+TestVideoStreamPlayback update / pos: 0.27531099999999986
+TestVideoStreamPlayback update / pos: 0.29158400000000007
+TestVideoStreamPlayback update / pos: 0.30835199999999996
+TestVideoStreamPlayback update / pos: 0.3254649999999999
+TestVideoStreamPlayback update / pos: 0.341917
+TestVideoStreamPlayback update / pos: 0.3585639999999999
+TestVideoStreamPlayback update / pos: 0.37530299999999994
+TestVideoStreamPlayback update / pos: 0.391918
+TestVideoStreamPlayback update / pos: 0.408752
+TestVideoStreamPlayback update / pos: 0.42517399999999994
+TestVideoStreamPlayback update / pos: 0.44155199999999994
+TestVideoStreamPlayback update / pos: 0.45893300000000004
+TestVideoStreamPlayback update / pos: 0.47525700000000004
+TestVideoStreamPlayback update / pos: 0.49231099999999994
+TestVideoStreamPlayback update / pos: 0.5102879999999999
+thread '<unnamed>' panicked at /Users/fu/.cargo/git/checkouts/gdext-76630c89719e160c/8163134/godot-core/src/storage/multi_threaded.rs:59:13:
+Gd<T>::bind() failed, already bound; T = godot_test_video_stream::TestVideoStreamPlayback.
+  Make sure to use `self.base_mut()` or `self.base()` instead of `self.to_gd()` when possible.
+  Details: cannot borrow while accessible mutable borrow exists.
+stack backtrace:
+   0:        0x10abbab18 - std::backtrace_rs::backtrace::libunwind::trace::h6de1cbf3f672a4f8
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/../../backtrace/src/backtrace/libunwind.rs:105:5
+   1:        0x10abbab18 - std::backtrace_rs::backtrace::trace_unsynchronized::hd0de2d5ef13b6f4d
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/../../backtrace/src/backtrace/mod.rs:66:5
+   2:        0x10abbab18 - std::sys_common::backtrace::_print_fmt::h2a33510d9b3bb866
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/sys_common/backtrace.rs:68:5
+   3:        0x10abbab18 - <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt::h01b2beffade888b2
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/sys_common/backtrace.rs:44:22
+   4:        0x10abd411c - core::fmt::rt::Argument::fmt::h5ddc0f22b2928899
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/core/src/fmt/rt.rs:142:9
+   5:        0x10abd411c - core::fmt::write::hbadb443a71b75f23
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/core/src/fmt/mod.rs:1153:17
+   6:        0x10abb8e0c - std::io::Write::write_fmt::hc09d7755e3ead5f0
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/io/mod.rs:1843:15
+   7:        0x10abba970 - std::sys_common::backtrace::_print::h3cd1786cbb1caf0f
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/sys_common/backtrace.rs:47:5
+   8:        0x10abba970 - std::sys_common::backtrace::print::h28349e5c25acbac7
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/sys_common/backtrace.rs:34:9
+   9:        0x10abbbe50 - std::panicking::default_hook::{{closure}}::hd24b6196784d991e
+  10:        0x10abbbb34 - std::panicking::default_hook::hfcec80a2720c8c73
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/panicking.rs:292:9
+  11:        0x10abbc76c - <alloc::boxed::Box<F,A> as core::ops::function::Fn<Args>>::call::h9bd8c4baacf94fdd
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/alloc/src/boxed.rs:2034:9
+  12:        0x10abbc76c - std::panicking::rust_panic_with_hook::h84760468187ddc85
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/panicking.rs:783:13
+  13:        0x10abbc130 - std::panicking::begin_panic_handler::{{closure}}::he666a5eb600a7203
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/panicking.rs:657:13
+  14:        0x10abbaf9c - std::sys_common::backtrace::__rust_end_short_backtrace::h592f44d2bf9f843f
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/sys_common/backtrace.rs:171:18
+  15:        0x10abbbea8 - rust_begin_unwind
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/panicking.rs:645:5
+  16:        0x10abddedc - core::panicking::panic_fmt::h98bbf7bdf4994454
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/core/src/panicking.rs:72:14
+  17:        0x10aa2ae14 - <godot_core::storage::multi_threaded::InstanceStorage<T> as godot_core::storage::instance_storage::Storage>::get::{{closure}}::hea28d49ff90ea4a7
+                               at /Users/fu/.cargo/git/checkouts/gdext-76630c89719e160c/8163134/godot-core/src/storage/multi_threaded.rs:59:13
+  18:        0x10aa1e238 - core::result::Result<T,E>::unwrap_or_else::h9ea077b64d085698
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/core/src/result.rs:1431:23
+  19:        0x10aa2acec - <godot_core::storage::multi_threaded::InstanceStorage<T> as godot_core::storage::instance_storage::Storage>::get::h7c2ca18de40b5f98
+                               at /Users/fu/.cargo/git/checkouts/gdext-76630c89719e160c/8163134/godot-core/src/storage/multi_threaded.rs:58:9
+TestVideoStreamPlayback update / pos: 0.5249789999999999
+  20:        0x10aa1cd0c - <godot_test_video_stream::TestVideoStreamPlayback as godot_core::obj::traits::cap::ImplementsGodotVirtual>::__virtual_call::virtual_fn::{{closure}}::h0541188b41008e63
+                               at /Users/fu/lab/godot_test_video_stream/rust/src/lib.rs:54:1
+  21:        0x10aa28840 - core::ops::function::FnOnce::call_once::h071b773611be4c55
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/core/src/ops/function.rs:250:5
+  22:        0x10aa2bfa0 - <(R,) as godot_core::builtin::meta::signature::PtrcallSignatureTuple>::in_ptrcall::h493cd4b87417cd1b
+                               at /Users/fu/.cargo/git/checkouts/gdext-76630c89719e160c/8163134/godot-core/src/builtin/meta/signature.rs:367:38
+  23:        0x10aa2fe20 - <godot_test_video_stream::TestVideoStreamPlayback as godot_core::obj::traits::cap::ImplementsGodotVirtual>::__virtual_call::virtual_fn::hc9de74f3db269d1b
+                               at /Users/fu/lab/godot_test_video_stream/rust/src/lib.rs:54:1
+fatal runtime error: failed to initiate panic, error 5
+./godot_run.sh: line 6: 75597 Abort trap: 6           /Applications/Godot.app/Contents/MacOS/Godot --path . res://node_2d.tscn

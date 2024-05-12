@@ -1,0 +1,75 @@
+$ RUST_BACKTRACE=full ./godot_run.sh
+
+Initialize godot-rust (API v4.2.2.stable.official, runtime v4.2.2.stable.official)
+Godot Engine v4.2.2.stable.official.15073afe3 - https://godotengine.org
+Vulkan API 1.2.231 - Forward+ - Using Vulkan Device #0: Apple - Apple M1
+
+2024-05-12 20:32:18.866 Godot[69114:2707463] WARNING: AVCaptureDeviceTypeExternal is deprecated for Continuity Cameras. Please use AVCaptureDeviceTypeContinuityCamera and add NSCameraUseContinuityCameraDeviceType to your Info.plist.
+TestVideoStream init
+TestVideoStream instantiate_playback
+TestVideoStreamPlayback init
+TestVideoStreamPlayback get_texture
+TestVideoStreamPlayback update / pos: 0.0
+thread '<unnamed>' panicked at /Users/fu/.cargo/git/checkouts/gdext-76630c89719e160c/8163134/godot-ffi/src/binding/single_threaded.rs:100:13:
+assertion `left == right` failed: attempted to access binding from different thread than main thread; this is UB - use the "experimental-threads" feature.
+  left: ThreadId(1)
+ right: ThreadId(2)
+stack backtrace:
+   0:        0x10fa1e924 - std::backtrace_rs::backtrace::libunwind::trace::h6de1cbf3f672a4f8
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/../../backtrace/src/backtrace/libunwind.rs:105:5
+   1:        0x10fa1e924 - std::backtrace_rs::backtrace::trace_unsynchronized::hd0de2d5ef13b6f4d
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/../../backtrace/src/backtrace/mod.rs:66:5
+   2:        0x10fa1e924 - std::sys_common::backtrace::_print_fmt::h2a33510d9b3bb866
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/sys_common/backtrace.rs:68:5
+   3:        0x10fa1e924 - <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt::h01b2beffade888b2
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/sys_common/backtrace.rs:44:22
+   4:        0x10fa37f30 - core::fmt::rt::Argument::fmt::h5ddc0f22b2928899
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/core/src/fmt/rt.rs:142:9
+   5:        0x10fa37f30 - core::fmt::write::hbadb443a71b75f23
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/core/src/fmt/mod.rs:1153:17
+   6:        0x10fa1cc18 - std::io::Write::write_fmt::hc09d7755e3ead5f0
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/io/mod.rs:1843:15
+   7:        0x10fa1e77c - std::sys_common::backtrace::_print::h3cd1786cbb1caf0f
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/sys_common/backtrace.rs:47:5
+   8:        0x10fa1e77c - std::sys_common::backtrace::print::h28349e5c25acbac7
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/sys_common/backtrace.rs:34:9
+   9:        0x10fa1fc5c - std::panicking::default_hook::{{closure}}::hd24b6196784d991e
+  10:        0x10fa1f940 - std::panicking::default_hook::hfcec80a2720c8c73
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/panicking.rs:292:9
+  11:        0x10fa20578 - <alloc::boxed::Box<F,A> as core::ops::function::Fn<Args>>::call::h9bd8c4baacf94fdd
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/alloc/src/boxed.rs:2034:9
+  12:        0x10fa20578 - std::panicking::rust_panic_with_hook::h84760468187ddc85
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/panicking.rs:783:13
+  13:        0x10fa1ff3c - std::panicking::begin_panic_handler::{{closure}}::he666a5eb600a7203
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/panicking.rs:657:13
+  14:        0x10fa1eda8 - std::sys_common::backtrace::__rust_end_short_backtrace::h592f44d2bf9f843f
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/sys_common/backtrace.rs:171:18
+  15:        0x10fa1fcb4 - rust_begin_unwind
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/std/src/panicking.rs:645:5
+  16:        0x10fa41ce4 - core::panicking::panic_fmt::h98bbf7bdf4994454
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/core/src/panicking.rs:72:14
+  17:        0x10fa42048 - core::panicking::assert_failed_inner::hf761943632c466c1
+  18:        0x10fa3fe7c - core::panicking::assert_failed::h7d285050cde74b20
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/core/src/panicking.rs:298:5
+  19:        0x10f8d59f0 - godot_ffi::binding::single_threaded::BindingStorage::get_binding_unchecked::h653b9b868958f076
+                               at /Users/fu/.cargo/git/checkouts/gdext-76630c89719e160c/8163134/godot-ffi/src/binding/single_threaded.rs:100:13
+  20:        0x10f8d59f0 - godot_ffi::binding::get_binding::h76229a8b97ec11d3
+                               at /Users/fu/.cargo/git/checkouts/gdext-76630c89719e160c/8163134/godot-ffi/src/binding/mod.rs:248:5
+  21:        0x10f8d59f0 - godot_ffi::binding::builtin_lifecycle_api::h50d79f2d96a36d59
+                               at /Users/fu/.cargo/git/checkouts/gdext-76630c89719e160c/8163134/godot-ffi/src/binding/mod.rs:112:6
+  22:        0x10f8d59f0 - <godot_core::builtin::string::gstring::GString as core::convert::From<&godot_core::builtin::string::string_name::StringName>>::from::{{closure}}::h979ca02e5fe5fd55
+                               at /Users/fu/.cargo/git/checkouts/gdext-76630c89719e160c/8163134/godot-core/src/builtin/string/gstring.rs:274:28
+  23:        0x10f8d77c0 - <godot_core::builtin::string::gstring::GString as godot_ffi::godot_ffi::GodotFfi>::new_with_uninit::h2d4913b1afb8748d
+                               at /Users/fu/.cargo/git/checkouts/gdext-76630c89719e160c/8163134/godot-ffi/src/godot_ffi.rs:241:13
+  24:        0x10f8cd1d8 - godot_ffi::godot_ffi::new_with_uninit_or_init::hb069a23302b0587b
+                               at /Users/fu/.cargo/git/checkouts/gdext-76630c89719e160c/8163134/godot-ffi/src/godot_ffi.rs:124:5
+  25:        0x10f8d58ac - <godot_core::builtin::string::gstring::GString as core::convert::From<&godot_core::builtin::string::string_name::StringName>>::from::hb7becad98e1b7a3d
+                               at /Users/fu/.cargo/git/checkouts/gdext-76630c89719e160c/8163134/godot-core/src/builtin/string/gstring.rs:273:13
+  26:        0x10f8d5f70 - <godot_core::builtin::string::string_name::StringName as core::fmt::Display>::fmt::ha1534428db4037e2
+                               at /Users/fu/.cargo/git/checkouts/gdext-76630c89719e160c/8163134/godot-core/src/builtin/string/string_name.rs:173:17
+  27:        0x10f8d3a78 - <T as alloc::string::ToString>::to_string::hdc72eb434b6ccc95
+                               at /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/alloc/src/string.rs:2553:9
+  28:        0x10f886fe4 - godot_core::registry::callbacks::get_virtual::ha49f912624034626
+                               at /Users/fu/.cargo/git/checkouts/gdext-76630c89719e160c/8163134/godot-core/src/registry/callbacks.rs:107:23
+fatal runtime error: failed to initiate panic, error 5
+./godot_run.sh: line 6: 69114 Abort trap: 6           /Applications/Godot.app/Contents/MacOS/Godot --path . res://node_2d.tscn

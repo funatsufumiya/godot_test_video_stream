@@ -1,0 +1,622 @@
+-------------------------------------
+Translated Report (Full Report Below)
+-------------------------------------
+
+Process:               Godot [5403]
+Path:                  /Applications/Godot.app/Contents/MacOS/Godot
+Identifier:            org.godotengine.godot
+Version:               4.2.2 (4.2.2)
+Code Type:             ARM-64 (Native)
+Parent Process:        Exited process [5401]
+Responsible:           iTerm2 [1657]
+User ID:               502
+
+Date/Time:             2024-05-12 20:45:40.4228 +0900
+OS Version:            macOS 14.2.1 (23C71)
+Report Version:        12
+Anonymous UUID:        71D2A2A4-EC04-7630-93C9-1A87B1BCD293
+
+Sleep/Wake UUID:       7760BE66-28F1-41BF-98C7-85798C416B40
+
+Time Awake Since Boot: 51000 seconds
+Time Since Wake:       47314 seconds
+
+System Integrity Protection: disabled
+
+Crashed Thread:        18  com.apple.audio.IOThread.client
+
+Exception Type:        EXC_CRASH (SIGABRT)
+Exception Codes:       0x0000000000000000, 0x0000000000000000
+
+Termination Reason:    Namespace SIGNAL, Code 6 Abort trap: 6
+Terminating Process:   Godot [5403]
+
+Application Specific Information:
+abort() called
+
+
+Thread 0::  Dispatch queue: com.apple.main-thread
+0   libsystem_kernel.dylib        	       0x186c91808 semaphore_timedwait_trap + 8
+1   libdispatch.dylib             	       0x186b20f28 _dispatch_sema4_timedwait + 64
+2   libdispatch.dylib             	       0x186b21524 _dispatch_semaphore_wait_slow + 76
+3   QuartzCore                    	       0x18f0c6664 CAMetalLayerPrivateNextDrawableLocked(CAMetalLayer*, CAMetalDrawable**, unsigned long*) + 1260
+4   QuartzCore                    	       0x18ee80540 -[CAMetalLayer nextDrawable] + 128
+5   Godot                         	       0x104fa4464 0x104c00000 + 3818596
+6   Godot                         	       0x104fa3d7c 0x104c00000 + 3816828
+7   Godot                         	       0x104fa596c 0x104c00000 + 3823980
+8   Godot                         	       0x10500b710 0x104c00000 + 4241168
+9   Godot                         	       0x10500b258 0x104c00000 + 4239960
+10  Godot                         	       0x104fc44e4 0x104c00000 + 3949796
+11  Godot                         	       0x104fc3d7c 0x104c00000 + 3947900
+12  Godot                         	       0x104fc8b00 0x104c00000 + 3967744
+13  Godot                         	       0x104fc2e3c 0x104c00000 + 3943996
+14  Godot                         	       0x104fc3280 0x104c00000 + 3945088
+15  Godot                         	       0x10500973c 0x104c00000 + 4233020
+16  Godot                         	       0x105007b08 0x104c00000 + 4225800
+17  Godot                         	       0x105006954 0x104c00000 + 4221268
+18  Godot                         	       0x104f74e50 0x104c00000 + 3624528
+19  Godot                         	       0x105f2272c 0x104c00000 + 20064044
+20  Godot                         	       0x105f06a60 0x104c00000 + 19950176
+21  Godot                         	       0x107e9d328 0x104c00000 + 53072680
+22  Godot                         	       0x10538d34c 0x104c00000 + 7918412
+23  Godot                         	       0x105337714 0x104c00000 + 7567124
+24  Godot                         	       0x105368d38 0x104c00000 + 7769400
+25  dyld                          	       0x1869510e0 start + 2360
+
+Thread 1:
+0   libsystem_pthread.dylib       	       0x186ccce28 start_wqthread + 0
+
+Thread 2:
+0   libsystem_pthread.dylib       	       0x186ccce28 start_wqthread + 0
+
+Thread 3:
+0   libsystem_pthread.dylib       	       0x186ccce28 start_wqthread + 0
+
+Thread 4:
+0   libsystem_kernel.dylib        	       0x186c9506c __psynch_cvwait + 8
+1   libsystem_pthread.dylib       	       0x186cd25fc _pthread_cond_wait + 1228
+2   libc++.1.dylib                	       0x186bf94dc std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&) + 28
+3   Godot                         	       0x108516998 _IP_ResolverPrivate::_thread_function(void*) + 152
+4   Godot                         	       0x108420d0c 0x104c00000 + 58854668
+5   Godot                         	       0x108421074 0x104c00000 + 58855540
+6   libsystem_pthread.dylib       	       0x186cd2034 _pthread_start + 136
+7   libsystem_pthread.dylib       	       0x186ccce3c thread_start + 8
+
+Thread 5:
+0   libsystem_kernel.dylib        	       0x186c9506c __psynch_cvwait + 8
+1   libsystem_pthread.dylib       	       0x186cd25fc _pthread_cond_wait + 1228
+2   libc++.1.dylib                	       0x186bf94dc std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&) + 28
+3   Godot                         	       0x1089462fc 0x104c00000 + 64250620
+4   Godot                         	       0x108420d0c 0x104c00000 + 58854668
+5   Godot                         	       0x108421074 0x104c00000 + 58855540
+6   libsystem_pthread.dylib       	       0x186cd2034 _pthread_start + 136
+7   libsystem_pthread.dylib       	       0x186ccce3c thread_start + 8
+
+Thread 6:
+0   libsystem_kernel.dylib        	       0x186c9506c __psynch_cvwait + 8
+1   libsystem_pthread.dylib       	       0x186cd25fc _pthread_cond_wait + 1228
+2   libc++.1.dylib                	       0x186bf94dc std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&) + 28
+3   Godot                         	       0x1089462fc 0x104c00000 + 64250620
+4   Godot                         	       0x108420d0c 0x104c00000 + 58854668
+5   Godot                         	       0x108421074 0x104c00000 + 58855540
+6   libsystem_pthread.dylib       	       0x186cd2034 _pthread_start + 136
+7   libsystem_pthread.dylib       	       0x186ccce3c thread_start + 8
+
+Thread 7:
+0   libsystem_kernel.dylib        	       0x186c9506c __psynch_cvwait + 8
+1   libsystem_pthread.dylib       	       0x186cd25fc _pthread_cond_wait + 1228
+2   libc++.1.dylib                	       0x186bf94dc std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&) + 28
+3   Godot                         	       0x1089462fc 0x104c00000 + 64250620
+4   Godot                         	       0x108420d0c 0x104c00000 + 58854668
+5   Godot                         	       0x108421074 0x104c00000 + 58855540
+6   libsystem_pthread.dylib       	       0x186cd2034 _pthread_start + 136
+7   libsystem_pthread.dylib       	       0x186ccce3c thread_start + 8
+
+Thread 8:
+0   libsystem_kernel.dylib        	       0x186c9506c __psynch_cvwait + 8
+1   libsystem_pthread.dylib       	       0x186cd25fc _pthread_cond_wait + 1228
+2   libc++.1.dylib                	       0x186bf94dc std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&) + 28
+3   Godot                         	       0x1089462fc 0x104c00000 + 64250620
+4   Godot                         	       0x108420d0c 0x104c00000 + 58854668
+5   Godot                         	       0x108421074 0x104c00000 + 58855540
+6   libsystem_pthread.dylib       	       0x186cd2034 _pthread_start + 136
+7   libsystem_pthread.dylib       	       0x186ccce3c thread_start + 8
+
+Thread 9:
+0   libsystem_kernel.dylib        	       0x186c9506c __psynch_cvwait + 8
+1   libsystem_pthread.dylib       	       0x186cd25fc _pthread_cond_wait + 1228
+2   libc++.1.dylib                	       0x186bf94dc std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&) + 28
+3   Godot                         	       0x1089462fc 0x104c00000 + 64250620
+4   Godot                         	       0x108420d0c 0x104c00000 + 58854668
+5   Godot                         	       0x108421074 0x104c00000 + 58855540
+6   libsystem_pthread.dylib       	       0x186cd2034 _pthread_start + 136
+7   libsystem_pthread.dylib       	       0x186ccce3c thread_start + 8
+
+Thread 10:
+0   libsystem_kernel.dylib        	       0x186c9506c __psynch_cvwait + 8
+1   libsystem_pthread.dylib       	       0x186cd25fc _pthread_cond_wait + 1228
+2   libc++.1.dylib                	       0x186bf94dc std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&) + 28
+3   Godot                         	       0x1089462fc 0x104c00000 + 64250620
+4   Godot                         	       0x108420d0c 0x104c00000 + 58854668
+5   Godot                         	       0x108421074 0x104c00000 + 58855540
+6   libsystem_pthread.dylib       	       0x186cd2034 _pthread_start + 136
+7   libsystem_pthread.dylib       	       0x186ccce3c thread_start + 8
+
+Thread 11:
+0   libsystem_kernel.dylib        	       0x186c9506c __psynch_cvwait + 8
+1   libsystem_pthread.dylib       	       0x186cd25fc _pthread_cond_wait + 1228
+2   libc++.1.dylib                	       0x186bf94dc std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&) + 28
+3   Godot                         	       0x1089462fc 0x104c00000 + 64250620
+4   Godot                         	       0x108420d0c 0x104c00000 + 58854668
+5   Godot                         	       0x108421074 0x104c00000 + 58855540
+6   libsystem_pthread.dylib       	       0x186cd2034 _pthread_start + 136
+7   libsystem_pthread.dylib       	       0x186ccce3c thread_start + 8
+
+Thread 12:
+0   libsystem_kernel.dylib        	       0x186c9506c __psynch_cvwait + 8
+1   libsystem_pthread.dylib       	       0x186cd25fc _pthread_cond_wait + 1228
+2   libc++.1.dylib                	       0x186bf94dc std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&) + 28
+3   Godot                         	       0x1089462fc 0x104c00000 + 64250620
+4   Godot                         	       0x108420d0c 0x104c00000 + 58854668
+5   Godot                         	       0x108421074 0x104c00000 + 58855540
+6   libsystem_pthread.dylib       	       0x186cd2034 _pthread_start + 136
+7   libsystem_pthread.dylib       	       0x186ccce3c thread_start + 8
+
+Thread 13:
+0   libsystem_pthread.dylib       	       0x186ccce28 start_wqthread + 0
+
+Thread 14:: com.apple.NSEventThread
+0   libsystem_kernel.dylib        	       0x186c91874 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x186ca3cf0 mach_msg2_internal + 80
+2   libsystem_kernel.dylib        	       0x186c9a4b0 mach_msg_overwrite + 476
+3   libsystem_kernel.dylib        	       0x186c91bf8 mach_msg + 24
+4   CoreFoundation                	       0x186dafbf4 __CFRunLoopServiceMachPort + 160
+5   CoreFoundation                	       0x186dae4bc __CFRunLoopRun + 1208
+6   CoreFoundation                	       0x186dad9ac CFRunLoopRunSpecific + 608
+7   AppKit                        	       0x18a6b4510 _NSEventThread + 144
+8   libsystem_pthread.dylib       	       0x186cd2034 _pthread_start + 136
+9   libsystem_pthread.dylib       	       0x186ccce3c thread_start + 8
+
+Thread 15:: caulk.messenger.shared:17
+0   libsystem_kernel.dylib        	       0x186c917f0 semaphore_wait_trap + 8
+1   caulk                         	       0x191058690 caulk::semaphore::timed_wait(double) + 212
+2   caulk                         	       0x191058544 caulk::concurrent::details::worker_thread::run() + 36
+3   caulk                         	       0x191058244 void* caulk::thread_proxy<std::__1::tuple<caulk::thread::attributes, void (caulk::concurrent::details::worker_thread::*)(), std::__1::tuple<caulk::concurrent::details::worker_thread*>>>(void*) + 96
+4   libsystem_pthread.dylib       	       0x186cd2034 _pthread_start + 136
+5   libsystem_pthread.dylib       	       0x186ccce3c thread_start + 8
+
+Thread 16:: caulk.messenger.shared:high
+0   libsystem_kernel.dylib        	       0x186c917f0 semaphore_wait_trap + 8
+1   caulk                         	       0x191058690 caulk::semaphore::timed_wait(double) + 212
+2   caulk                         	       0x191058544 caulk::concurrent::details::worker_thread::run() + 36
+3   caulk                         	       0x191058244 void* caulk::thread_proxy<std::__1::tuple<caulk::thread::attributes, void (caulk::concurrent::details::worker_thread::*)(), std::__1::tuple<caulk::concurrent::details::worker_thread*>>>(void*) + 96
+4   libsystem_pthread.dylib       	       0x186cd2034 _pthread_start + 136
+5   libsystem_pthread.dylib       	       0x186ccce3c thread_start + 8
+
+Thread 17:: caulk::deferred_logger
+0   libsystem_kernel.dylib        	       0x186c917f0 semaphore_wait_trap + 8
+1   caulk                         	       0x191058690 caulk::semaphore::timed_wait(double) + 212
+2   caulk                         	       0x191058544 caulk::concurrent::details::worker_thread::run() + 36
+3   caulk                         	       0x191058244 void* caulk::thread_proxy<std::__1::tuple<caulk::thread::attributes, void (caulk::concurrent::details::worker_thread::*)(), std::__1::tuple<caulk::concurrent::details::worker_thread*>>>(void*) + 96
+4   libsystem_pthread.dylib       	       0x186cd2034 _pthread_start + 136
+5   libsystem_pthread.dylib       	       0x186ccce3c thread_start + 8
+
+Thread 18 Crashed:: com.apple.audio.IOThread.client
+0   libsystem_kernel.dylib        	       0x186c9a0dc __pthread_kill + 8
+1   libsystem_pthread.dylib       	       0x186cd1cc0 pthread_kill + 288
+2   libsystem_c.dylib             	       0x186bdda40 abort + 180
+3   libgodot_test_video_stream.dylib	       0x10f75a7c8 std::sys::pal::unix::abort_internal::h7fdb07780559b948 + 12
+4   libgodot_test_video_stream.dylib	       0x10f758b7c rust_panic + 96
+5   libgodot_test_video_stream.dylib	       0x10f7587cc std::panicking::rust_panic_with_hook::h84760468187ddc85 + 1640
+6   libgodot_test_video_stream.dylib	       0x10f758130 std::panicking::begin_panic_handler::_$u7b$$u7b$closure$u7d$$u7d$::he666a5eb600a7203 + 156
+7   libgodot_test_video_stream.dylib	       0x10f756f9c std::sys_common::backtrace::__rust_end_short_backtrace::h592f44d2bf9f843f + 12
+8   libgodot_test_video_stream.dylib	       0x10f757ea8 rust_begin_unwind + 52
+9   libgodot_test_video_stream.dylib	       0x10f779edc core::panicking::panic_fmt::h98bbf7bdf4994454 + 52
+10  libgodot_test_video_stream.dylib	       0x10f5c6e14 _$LT$godot_core..storage..multi_threaded..InstanceStorage$LT$T$GT$$u20$as$u20$godot_core..storage..instance_storage..Storage$GT$::get::_$u7b$$u7b$closure$u7d$$u7d$::hea28d49ff90ea4a7 + 284 (multi_threaded.rs:59)
+11  libgodot_test_video_stream.dylib	       0x10f5ba238 core::result::Result$LT$T$C$E$GT$::unwrap_or_else::h9ea077b64d085698 + 100 (result.rs:1431)
+12  libgodot_test_video_stream.dylib	       0x10f5c6cec _$LT$godot_core..storage..multi_threaded..InstanceStorage$LT$T$GT$$u20$as$u20$godot_core..storage..instance_storage..Storage$GT$::get::h7c2ca18de40b5f98 + 76 (multi_threaded.rs:58)
+13  libgodot_test_video_stream.dylib	       0x10f5b8d0c _$LT$godot_test_video_stream..TestVideoStreamPlayback$u20$as$u20$godot_core..obj..traits..cap..ImplementsGodotVirtual$GT$::__virtual_call::virtual_fn::_$u7b$$u7b$closure$u7d$$u7d$::h0541188b41008e63 + 48 (lib.rs:54)
+14  libgodot_test_video_stream.dylib	       0x10f5c4840 core::ops::function::FnOnce::call_once::h071b773611be4c55 + 28 (function.rs:250)
+15  libgodot_test_video_stream.dylib	       0x10f5c7fa0 _$LT$$LP$R$C$$RP$$u20$as$u20$godot_core..builtin..meta..signature..PtrcallSignatureTuple$GT$::in_ptrcall::h493cd4b87417cd1b + 56 (signature.rs:367)
+16  libgodot_test_video_stream.dylib	       0x10f5cbe20 _$LT$godot_test_video_stream..TestVideoStreamPlayback$u20$as$u20$godot_core..obj..traits..cap..ImplementsGodotVirtual$GT$::__virtual_call::virtual_fn::hc9de74f3db269d1b + 124 (lib.rs:54)
+17  Godot                         	       0x1078d72a0 0x104c00000 + 47018656
+18  Godot                         	       0x1070d7de4 0x104c00000 + 38632932
+19  Godot                         	       0x1079f9744 0x104c00000 + 48207684
+20  Godot                         	       0x1079f8364 0x104c00000 + 48202596
+21  Godot                         	       0x105ec1e08 0x104c00000 + 19668488
+22  CoreAudio                     	       0x1293f3c44 0x1292f0000 + 1064004
+23  CoreAudio                     	       0x1292faf78 0x1292f0000 + 44920
+24  AudioToolboxCore              	       0x188ef6fbc caulk::expected<unsigned int, int> caulk::function_ref<caulk::expected<unsigned int, int> (ACAudioSpan&)>::functor_invoker<acv2::AudioConverterV2::fillComplexBuffer(int (*)(OpaqueAudioConverter*, unsigned int*, AudioBufferList*, AudioStreamPacketDescription**, void*), void*, unsigned int*, AudioBufferList*, AudioStreamPacketDescription*, AudioStreamPacketDependencyInfo*)::$_2>(caulk::details::erased_callable<caulk::expected<unsigned int, int> (ACAudioSpan&)> const&, ACAudioSpan&) + 172
+25  AudioToolboxCore              	       0x188e4343c acv2::AudioConverterChain::ObtainInput(acv2::AudioConverterBase&, unsigned int) + 552
+26  AudioToolboxCore              	       0x1890303d0 acv2::CBRConverter::ProduceOutput(ACAudioSpan&) + 52
+27  AudioToolboxCore              	       0x188e428f0 acv2::AudioConverterChain::ProduceOutput(caulk::function_ref<caulk::expected<unsigned int, int> (ACAudioSpan&)>, ACBaseAudioSpan&) + 180
+28  AudioToolboxCore              	       0x188ef6ab0 acv2::AudioConverterV2::fillComplexBuffer(int (*)(OpaqueAudioConverter*, unsigned int*, AudioBufferList*, AudioStreamPacketDescription**, void*), void*, unsigned int*, AudioBufferList*, AudioStreamPacketDescription*, AudioStreamPacketDependencyInfo*) + 908
+29  AudioToolboxCore              	       0x188ef9c48 with_resolved(OpaqueAudioConverter*, caulk::function_ref<int (AudioConverterAPI*)>) + 60
+30  AudioToolboxCore              	       0x188efa110 AudioConverterFillComplexBuffer + 88
+31  CoreAudio                     	       0x1292fa974 0x1292f0000 + 43380
+32  CoreAudio                     	       0x1293f99dc 0x1292f0000 + 1087964
+33  CoreAudio                     	       0x1292fec88 0x1292f0000 + 60552
+34  CoreAudio                     	       0x1894f3efc HALC_ProxyIOContext::IOWorkLoop() + 9244
+35  CoreAudio                     	       0x1894f13b0 invocation function for block in HALC_ProxyIOContext::HALC_ProxyIOContext(unsigned int, unsigned int) + 108
+36  CoreAudio                     	       0x189670564 HALC_IOThread::Entry(void*) + 88
+37  libsystem_pthread.dylib       	       0x186cd2034 _pthread_start + 136
+38  libsystem_pthread.dylib       	       0x186ccce3c thread_start + 8
+
+Thread 19:
+0   libsystem_kernel.dylib        	       0x186c9506c __psynch_cvwait + 8
+1   libsystem_pthread.dylib       	       0x186cd25fc _pthread_cond_wait + 1228
+2   libc++.1.dylib                	       0x186bf94dc std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&) + 28
+3   Godot                         	       0x105c070a8 0x104c00000 + 16806056
+4   Godot                         	       0x105c06f54 0x104c00000 + 16805716
+5   libsystem_pthread.dylib       	       0x186cd2034 _pthread_start + 136
+6   libsystem_pthread.dylib       	       0x186ccce3c thread_start + 8
+
+
+Thread 18 crashed with ARM Thread State (64-bit):
+    x0: 0x0000000000000000   x1: 0x0000000000000000   x2: 0x0000000000000000   x3: 0x0000000000000000
+    x4: 0x0000000000000000   x5: 0x0000000000000001   x6: 0x656d616e7373616c   x7: 0x0000000000000670
+    x8: 0xac9d23fecdaa6cf3   x9: 0xac9d23ffa6175cf3  x10: 0x0000000000110000  x11: 0x000000010f7fd200
+   x12: 0x000000010a704a38  x13: 0x0000000000000000  x14: 0x0000000000000000  x15: 0x000000010a701fac
+   x16: 0x0000000000000148  x17: 0x00000001e6523340  x18: 0x0000000000000000  x19: 0x0000000000000006
+   x20: 0x000000016bbd3000  x21: 0x0000000000016e03  x22: 0x000000016bbd30e0  x23: 0x000000010f801408
+   x24: 0x000000010a09d9f8  x25: 0x000000010a09da70  x26: 0x00006000032e2770  x27: 0x0000000000000038
+   x28: 0x0000000000000001   fp: 0x000000016bbd1b10   lr: 0x0000000186cd1cc0
+    sp: 0x000000016bbd1af0   pc: 0x0000000186c9a0dc cpsr: 0x40001000
+   far: 0x0000000000000000  esr: 0x56000080  Address size fault
+
+Binary Images:
+       0x129564000 -        0x1295abfff com.apple.cmio.DAL.VDC-4 (810.0) <76675a9c-f00f-38c3-acee-baa34b109ccc> /System/Library/Frameworks/CoreMediaIO.framework/Versions/A/Resources/VDC.plugin/Contents/MacOS/VDC
+       0x1292f0000 -        0x129427fff com.apple.audio.units.Components (1.14) <06275638-4d71-370d-bf96-b30a567270e1> /System/Library/Components/CoreAudio.component/Contents/MacOS/CoreAudio
+       0x10b660000 -        0x10b66bfff libobjc-trampolines.dylib (*) <7778e0d7-361a-378d-9438-3b2bb48c2154> /usr/lib/libobjc-trampolines.dylib
+       0x10f5b4000 -        0x10f7f7fff libgodot_test_video_stream.dylib (*) <5349a234-fd9c-3eff-bb73-1d91fa9a0ff7> /Users/USER/*/libgodot_test_video_stream.dylib
+       0x104c00000 -        0x10a707fff org.godotengine.godot (4.2.2) <7a2d9d8b-a941-35f2-9c8e-c9ce84acd78f> /Applications/Godot.app/Contents/MacOS/Godot
+       0x186c90000 -        0x186ccafff libsystem_kernel.dylib (*) <ca94fc21-bc40-3b43-b65d-b87ece9e1d48> /usr/lib/system/libsystem_kernel.dylib
+       0x186b1d000 -        0x186b63fff libdispatch.dylib (*) <a53d555d-f748-3010-83fe-385c660a81bd> /usr/lib/system/libdispatch.dylib
+       0x18ee6e000 -        0x18f236fff com.apple.QuartzCore (1.11) <4a615554-86bd-36e4-aab6-39c377bdae2c> /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+       0x18694b000 -        0x1869df347 dyld (*) <324e4ad9-e01f-3183-b09f-3e20b326643a> /usr/lib/dyld
+               0x0 - 0xffffffffffffffff ??? (*) <00000000-0000-0000-0000-000000000000> ???
+       0x186ccb000 -        0x186cd7ff3 libsystem_pthread.dylib (*) <a7d94c96-7b1f-3229-9bea-048d037c3292> /usr/lib/system/libsystem_pthread.dylib
+       0x186be6000 -        0x186c73ff7 libc++.1.dylib (*) <375254eb-5a65-35d0-b6b4-773e6763d289> /usr/lib/libc++.1.dylib
+       0x186d32000 -        0x187209fff com.apple.CoreFoundation (6.9) <47e4ec09-8f6e-30a8-99d0-34024d4f8122> /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+       0x18a551000 -        0x18b86bfff com.apple.AppKit (6.9) <f3527312-e426-3f7c-b77b-2bf49d1b7c04> /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+       0x191056000 -        0x19107ffff com.apple.audio.caulk (1.0) <25e50b84-b506-3db7-9a91-3824b9b8b880> /System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk
+       0x186b67000 -        0x186be5ffb libsystem_c.dylib (*) <ab8a0a0b-9a1e-3284-9243-5a0334468ae5> /usr/lib/system/libsystem_c.dylib
+       0x188dac000 -        0x189112fff com.apple.audio.AudioToolboxCore (1.0) <14797936-70f3-3bd2-9473-325590aa8cdf> /System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore
+       0x189308000 -        0x1899fafff com.apple.audio.CoreAudio (5.0) <2c54c60c-a5af-39f4-8286-0cb88fa43367> /System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio
+
+External Modification Summary:
+  Calls made by other processes targeting this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by all processes on this machine:
+    task_for_pid: 2
+    thread_create: 0
+    thread_set_state: 4
+
+VM Region Summary:
+ReadOnly portion of Libraries: Total=1.3G resident=0K(0%) swapped_out_or_unallocated=1.3G(100%)
+Writable regions: Total=1.6G written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=1.6G(100%)
+
+                                VIRTUAL   REGION 
+REGION TYPE                        SIZE    COUNT (non-coalesced) 
+===========                     =======  ======= 
+Accelerate framework               128K        1 
+Activity Tracing                   256K        1 
+CG image                           448K        7 
+ColorSync                          544K       26 
+CoreAnimation                      384K       24 
+CoreGraphics                        48K        3 
+CoreUI image data                 1248K        9 
+Foundation                          16K        1 
+Foundation (reserved)               16K        1         reserved VM address space (unallocated)
+Kernel Alloc Once                   32K        1 
+MALLOC                             1.6G       70 
+MALLOC guard page                  384K       24 
+STACK GUARD                       56.3M       20 
+Stack                             18.1M       20 
+VM_ALLOCATE                        704K       19 
+VM_ALLOCATE (reserved)              32K        1         reserved VM address space (unallocated)
+__AUTH                            1008K      218 
+__AUTH_CONST                      17.3M      388 
+__CTF                               824        1 
+__DATA                            6402K      379 
+__DATA_CONST                      22.0M      395 
+__DATA_DIRTY                      1029K      125 
+__FONT_DATA                          4K        1 
+__LINKEDIT                       899.2M        6 
+__OBJC_RO                         71.1M        1 
+__OBJC_RW                         2168K        1 
+__TEXT                           450.9M      410 
+dyld private memory                656K        4 
+mapped file                      244.0M       35 
+shared memory                      976K       17 
+===========                     =======  ======= 
+TOTAL                              3.4G     2209 
+TOTAL, minus reserved VM space     3.4G     2209 
+
+
+
+-----------
+Full Report
+-----------
+
+{"app_name":"Godot","timestamp":"2024-05-12 20:45:41.00 +0900","app_version":"4.2.2","slice_uuid":"7a2d9d8b-a941-35f2-9c8e-c9ce84acd78f","build_version":"4.2.2","platform":1,"bundleID":"org.godotengine.godot","share_with_app_devs":1,"is_first_party":0,"bug_type":"309","os_version":"macOS 14.2.1 (23C71)","roots_installed":0,"name":"Godot","incident_id":"914F949F-2AC8-4FA9-B8F1-D06BD891F8F9"}
+{
+  "uptime" : 51000,
+  "procRole" : "Foreground",
+  "version" : 2,
+  "userID" : 502,
+  "deployVersion" : 210,
+  "modelCode" : "MacBookAir10,1",
+  "coalitionID" : 1109,
+  "osVersion" : {
+    "train" : "macOS 14.2.1",
+    "build" : "23C71",
+    "releaseType" : "User"
+  },
+  "captureTime" : "2024-05-12 20:45:40.4228 +0900",
+  "codeSigningMonitor" : 1,
+  "incident" : "914F949F-2AC8-4FA9-B8F1-D06BD891F8F9",
+  "pid" : 5403,
+  "translated" : false,
+  "cpuType" : "ARM-64",
+  "roots_installed" : 0,
+  "bug_type" : "309",
+  "procLaunch" : "2024-05-12 20:45:36.4432 +0900",
+  "procStartAbsTime" : 1227177730188,
+  "procExitAbsTime" : 1227271665073,
+  "procName" : "Godot",
+  "procPath" : "\/Applications\/Godot.app\/Contents\/MacOS\/Godot",
+  "bundleInfo" : {"CFBundleShortVersionString":"4.2.2","CFBundleVersion":"4.2.2","CFBundleIdentifier":"org.godotengine.godot"},
+  "storeInfo" : {"deviceIdentifierForVendor":"0A32BC9D-FA17-51E9-B50E-2072B19F2E28","thirdParty":true},
+  "parentProc" : "Exited process",
+  "parentPid" : 5401,
+  "coalitionName" : "com.googlecode.iterm2",
+  "crashReporterKey" : "71D2A2A4-EC04-7630-93C9-1A87B1BCD293",
+  "responsiblePid" : 1657,
+  "responsibleProc" : "iTerm2",
+  "codeSigningID" : "org.godotengine.godot",
+  "codeSigningTeamID" : "6K46PWY5DM",
+  "codeSigningFlags" : 570490881,
+  "codeSigningValidationCategory" : 6,
+  "codeSigningTrustLevel" : 4294967295,
+  "instructionByteStream" : {"beforePC":"fyMD1f17v6n9AwCRXOD\/l78DAJH9e8Go\/w9f1sADX9YQKYDSARAA1A==","atPC":"AwEAVH8jA9X9e7+p\/QMAkVHg\/5e\/AwCR\/XvBqP8PX9bAA1\/WcAqA0g=="},
+  "wakeTime" : 47314,
+  "sleepWakeUUID" : "7760BE66-28F1-41BF-98C7-85798C416B40",
+  "sip" : "disabled",
+  "exception" : {"codes":"0x0000000000000000, 0x0000000000000000","rawCodes":[0,0],"type":"EXC_CRASH","signal":"SIGABRT"},
+  "termination" : {"flags":0,"code":6,"namespace":"SIGNAL","indicator":"Abort trap: 6","byProc":"Godot","byPid":5403},
+  "asi" : {"libsystem_c.dylib":["abort() called"]},
+  "extMods" : {"caller":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"system":{"thread_create":0,"thread_set_state":4,"task_for_pid":2},"targeted":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"warnings":0},
+  "faultingThread" : 18,
+  "threads" : [{"id":2779117,"threadState":{"x":[{"value":14},{"value":4294967115611373568},{"value":999999958},{"value":68719460488},{"value":0},{"value":0},{"value":1},{"value":0},{"value":999999958},{"value":12297829382473034411},{"value":13835058055282163714},{"value":16000000},{"value":4486135816},{"value":12970366926827061248},{"value":72057602051383637,"symbolLocation":72057594037927941,"symbol":"OBJC_CLASS_$_CAMetalLayer"},{"value":8013455696,"symbolLocation":0,"symbol":"OBJC_CLASS_$_CAMetalLayer"},{"value":18446744073709551578},{"value":8073322464},{"value":0},{"value":1227295447396},{"value":105553172481664},{"value":1000000000},{"value":0},{"value":5276477800},{"value":5276477528},{"value":835322178},{"value":7990583296,"symbolLocation":80,"symbol":"CA::Transform::rotate90()::t"},{"value":0},{"value":5276477672}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6554783528},"cpsr":{"value":2147487744},"fp":{"value":6092207440},"sp":{"value":6092207408},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556293128},"far":{"value":0}},"queue":"com.apple.main-thread","frames":[{"imageOffset":6152,"symbol":"semaphore_timedwait_trap","symbolLocation":8,"imageIndex":5},{"imageOffset":16168,"symbol":"_dispatch_sema4_timedwait","symbolLocation":64,"imageIndex":6},{"imageOffset":17700,"symbol":"_dispatch_semaphore_wait_slow","symbolLocation":76,"imageIndex":6},{"imageOffset":2459236,"symbol":"CAMetalLayerPrivateNextDrawableLocked(CAMetalLayer*, CAMetalDrawable**, unsigned long*)","symbolLocation":1260,"imageIndex":7},{"imageOffset":75072,"symbol":"-[CAMetalLayer nextDrawable]","symbolLocation":128,"imageIndex":7},{"imageOffset":3818596,"imageIndex":4},{"imageOffset":3816828,"imageIndex":4},{"imageOffset":3823980,"imageIndex":4},{"imageOffset":4241168,"imageIndex":4},{"imageOffset":4239960,"imageIndex":4},{"imageOffset":3949796,"imageIndex":4},{"imageOffset":3947900,"imageIndex":4},{"imageOffset":3967744,"imageIndex":4},{"imageOffset":3943996,"imageIndex":4},{"imageOffset":3945088,"imageIndex":4},{"imageOffset":4233020,"imageIndex":4},{"imageOffset":4225800,"imageIndex":4},{"imageOffset":4221268,"imageIndex":4},{"imageOffset":3624528,"imageIndex":4},{"imageOffset":20064044,"imageIndex":4},{"imageOffset":19950176,"imageIndex":4},{"imageOffset":53072680,"imageIndex":4},{"imageOffset":7918412,"imageIndex":4},{"imageOffset":7567124,"imageIndex":4},{"imageOffset":7769400,"imageIndex":4},{"imageOffset":24800,"symbol":"start","symbolLocation":2360,"imageIndex":8}]},{"id":2779126,"frames":[{"imageOffset":7720,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":10}],"threadState":{"x":[{"value":6092779520},{"value":4355},{"value":6092242944},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6092779520},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556536360},"far":{"value":0}}},{"id":2779127,"frames":[{"imageOffset":7720,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":10}],"threadState":{"x":[{"value":6093352960},{"value":8707},{"value":6092816384},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6093352960},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556536360},"far":{"value":0}}},{"id":2779137,"frames":[{"imageOffset":7720,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":10}],"threadState":{"x":[{"value":6093926400},{"value":23043},{"value":6093389824},{"value":0},{"value":409602},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6093926400},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556536360},"far":{"value":0}}},{"id":2779141,"frames":[{"imageOffset":20588,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":5},{"imageOffset":30204,"symbol":"_pthread_cond_wait","symbolLocation":1228,"imageIndex":10},{"imageOffset":79068,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":28,"imageIndex":11},{"imageOffset":59861400,"symbol":"_IP_ResolverPrivate::_thread_function(void*)","symbolLocation":152,"imageIndex":4},{"imageOffset":58854668,"imageIndex":4},{"imageOffset":58855540,"imageIndex":4},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":10},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":10}],"threadState":{"x":[{"value":260},{"value":0},{"value":0},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":6094499496},{"value":0},{"value":5268798056},{"value":2},{"value":0},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8159113976},{"value":0},{"value":5268798032},{"value":5268798096},{"value":6094500064},{"value":0},{"value":0},{"value":0},{"value":1},{"value":256},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6556558844},"cpsr":{"value":1610616832},"fp":{"value":6094499616},"sp":{"value":6094499472},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556307564},"far":{"value":0}}},{"id":2779142,"frames":[{"imageOffset":20588,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":5},{"imageOffset":30204,"symbol":"_pthread_cond_wait","symbolLocation":1228,"imageIndex":10},{"imageOffset":79068,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":28,"imageIndex":11},{"imageOffset":64250620,"imageIndex":4},{"imageOffset":58854668,"imageIndex":4},{"imageOffset":58855540,"imageIndex":4},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":10},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":10}],"threadState":{"x":[{"value":4},{"value":0},{"value":0},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":6095072952},{"value":0},{"value":5258896712},{"value":2},{"value":0},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8159113976},{"value":0},{"value":5258896688},{"value":5258896752},{"value":6095073504},{"value":0},{"value":0},{"value":0},{"value":1},{"value":256},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6556558844},"cpsr":{"value":1610616832},"fp":{"value":6095073072},"sp":{"value":6095072928},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556307564},"far":{"value":0}}},{"id":2779143,"frames":[{"imageOffset":20588,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":5},{"imageOffset":30204,"symbol":"_pthread_cond_wait","symbolLocation":1228,"imageIndex":10},{"imageOffset":79068,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":28,"imageIndex":11},{"imageOffset":64250620,"imageIndex":4},{"imageOffset":58854668,"imageIndex":4},{"imageOffset":58855540,"imageIndex":4},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":10},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":10}],"threadState":{"x":[{"value":4},{"value":0},{"value":0},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":6095646392},{"value":0},{"value":5258896712},{"value":2},{"value":0},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8159113976},{"value":0},{"value":5258896688},{"value":5258896752},{"value":6095646944},{"value":0},{"value":0},{"value":0},{"value":0},{"value":512},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6556558844},"cpsr":{"value":1610616832},"fp":{"value":6095646512},"sp":{"value":6095646368},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556307564},"far":{"value":0}}},{"id":2779144,"frames":[{"imageOffset":20588,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":5},{"imageOffset":30204,"symbol":"_pthread_cond_wait","symbolLocation":1228,"imageIndex":10},{"imageOffset":79068,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":28,"imageIndex":11},{"imageOffset":64250620,"imageIndex":4},{"imageOffset":58854668,"imageIndex":4},{"imageOffset":58855540,"imageIndex":4},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":10},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":10}],"threadState":{"x":[{"value":4},{"value":0},{"value":0},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":6096219832},{"value":0},{"value":5258896712},{"value":2},{"value":0},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8159113976},{"value":0},{"value":5258896688},{"value":5258896752},{"value":6096220384},{"value":0},{"value":0},{"value":0},{"value":0},{"value":768},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6556558844},"cpsr":{"value":1610616832},"fp":{"value":6096219952},"sp":{"value":6096219808},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556307564},"far":{"value":0}}},{"id":2779145,"frames":[{"imageOffset":20588,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":5},{"imageOffset":30204,"symbol":"_pthread_cond_wait","symbolLocation":1228,"imageIndex":10},{"imageOffset":79068,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":28,"imageIndex":11},{"imageOffset":64250620,"imageIndex":4},{"imageOffset":58854668,"imageIndex":4},{"imageOffset":58855540,"imageIndex":4},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":10},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":10}],"threadState":{"x":[{"value":4},{"value":0},{"value":0},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":6096793272},{"value":0},{"value":5258896712},{"value":2},{"value":0},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8159113976},{"value":0},{"value":5258896688},{"value":5258896752},{"value":6096793824},{"value":0},{"value":0},{"value":0},{"value":0},{"value":1024},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6556558844},"cpsr":{"value":1610616832},"fp":{"value":6096793392},"sp":{"value":6096793248},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556307564},"far":{"value":0}}},{"id":2779146,"frames":[{"imageOffset":20588,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":5},{"imageOffset":30204,"symbol":"_pthread_cond_wait","symbolLocation":1228,"imageIndex":10},{"imageOffset":79068,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":28,"imageIndex":11},{"imageOffset":64250620,"imageIndex":4},{"imageOffset":58854668,"imageIndex":4},{"imageOffset":58855540,"imageIndex":4},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":10},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":10}],"threadState":{"x":[{"value":4},{"value":0},{"value":0},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":6097366712},{"value":0},{"value":5258896712},{"value":2},{"value":0},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8159113976},{"value":0},{"value":5258896688},{"value":5258896752},{"value":6097367264},{"value":0},{"value":0},{"value":0},{"value":0},{"value":1280},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6556558844},"cpsr":{"value":1610616832},"fp":{"value":6097366832},"sp":{"value":6097366688},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556307564},"far":{"value":0}}},{"id":2779147,"frames":[{"imageOffset":20588,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":5},{"imageOffset":30204,"symbol":"_pthread_cond_wait","symbolLocation":1228,"imageIndex":10},{"imageOffset":79068,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":28,"imageIndex":11},{"imageOffset":64250620,"imageIndex":4},{"imageOffset":58854668,"imageIndex":4},{"imageOffset":58855540,"imageIndex":4},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":10},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":10}],"threadState":{"x":[{"value":4},{"value":0},{"value":0},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":6097940152},{"value":0},{"value":5258896712},{"value":2},{"value":0},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8159113976},{"value":0},{"value":5258896688},{"value":5258896752},{"value":6097940704},{"value":0},{"value":0},{"value":0},{"value":0},{"value":1536},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6556558844},"cpsr":{"value":1610616832},"fp":{"value":6097940272},"sp":{"value":6097940128},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556307564},"far":{"value":0}}},{"id":2779148,"frames":[{"imageOffset":20588,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":5},{"imageOffset":30204,"symbol":"_pthread_cond_wait","symbolLocation":1228,"imageIndex":10},{"imageOffset":79068,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":28,"imageIndex":11},{"imageOffset":64250620,"imageIndex":4},{"imageOffset":58854668,"imageIndex":4},{"imageOffset":58855540,"imageIndex":4},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":10},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":10}],"threadState":{"x":[{"value":4},{"value":0},{"value":0},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":6098513592},{"value":0},{"value":5258896712},{"value":2},{"value":0},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8159113976},{"value":0},{"value":5258896688},{"value":5258896752},{"value":6098514144},{"value":0},{"value":0},{"value":0},{"value":0},{"value":1792},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6556558844},"cpsr":{"value":1610616832},"fp":{"value":6098513712},"sp":{"value":6098513568},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556307564},"far":{"value":0}}},{"id":2779149,"frames":[{"imageOffset":20588,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":5},{"imageOffset":30204,"symbol":"_pthread_cond_wait","symbolLocation":1228,"imageIndex":10},{"imageOffset":79068,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":28,"imageIndex":11},{"imageOffset":64250620,"imageIndex":4},{"imageOffset":58854668,"imageIndex":4},{"imageOffset":58855540,"imageIndex":4},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":10},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":10}],"threadState":{"x":[{"value":260},{"value":0},{"value":0},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":6099087032},{"value":0},{"value":5258896712},{"value":2},{"value":0},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8159113976},{"value":0},{"value":5258896688},{"value":5258896752},{"value":6099087584},{"value":0},{"value":0},{"value":0},{"value":0},{"value":2048},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6556558844},"cpsr":{"value":1610616832},"fp":{"value":6099087152},"sp":{"value":6099087008},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556307564},"far":{"value":0}}},{"id":2779150,"frames":[{"imageOffset":7720,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":10}],"threadState":{"x":[{"value":6099660800},{"value":39171},{"value":6099124224},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6099660800},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556536360},"far":{"value":0}}},{"id":2779155,"name":"com.apple.NSEventThread","threadState":{"x":[{"value":268451845},{"value":21592279046},{"value":8589934592},{"value":164939629068288},{"value":0},{"value":164939629068288},{"value":2},{"value":4294967295},{"value":18446744073709550527},{"value":38403},{"value":0},{"value":1},{"value":38403},{"value":178454},{"value":0},{"value":0},{"value":18446744073709551569},{"value":8159098320},{"value":0},{"value":4294967295},{"value":2},{"value":164939629068288},{"value":0},{"value":164939629068288},{"value":6100230248},{"value":8589934592},{"value":21592279046},{"value":21592279046},{"value":4412409862}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6556368112},"cpsr":{"value":4096},"fp":{"value":6100230096},"sp":{"value":6100230016},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556293236},"far":{"value":0}},"frames":[{"imageOffset":6260,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":5},{"imageOffset":81136,"symbol":"mach_msg2_internal","symbolLocation":80,"imageIndex":5},{"imageOffset":42160,"symbol":"mach_msg_overwrite","symbolLocation":476,"imageIndex":5},{"imageOffset":7160,"symbol":"mach_msg","symbolLocation":24,"imageIndex":5},{"imageOffset":515060,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":160,"imageIndex":12},{"imageOffset":509116,"symbol":"__CFRunLoopRun","symbolLocation":1208,"imageIndex":12},{"imageOffset":506284,"symbol":"CFRunLoopRunSpecific","symbolLocation":608,"imageIndex":12},{"imageOffset":1455376,"symbol":"_NSEventThread","symbolLocation":144,"imageIndex":13},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":10},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":10}]},{"id":2779305,"name":"caulk.messenger.shared:17","threadState":{"x":[{"value":14},{"value":105553140014138},{"value":0},{"value":6100807786},{"value":105553140014112},{"value":25},{"value":0},{"value":0},{"value":0},{"value":4294967295},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":18446744073709551580},{"value":8159103816},{"value":0},{"value":105553163555536},{"value":105553163555536},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6728025744},"cpsr":{"value":2147487744},"fp":{"value":6100807552},"sp":{"value":6100807520},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556293104},"far":{"value":0}},"frames":[{"imageOffset":6128,"symbol":"semaphore_wait_trap","symbolLocation":8,"imageIndex":5},{"imageOffset":9872,"symbol":"caulk::semaphore::timed_wait(double)","symbolLocation":212,"imageIndex":14},{"imageOffset":9540,"symbol":"caulk::concurrent::details::worker_thread::run()","symbolLocation":36,"imageIndex":14},{"imageOffset":8772,"symbol":"void* caulk::thread_proxy<std::__1::tuple<caulk::thread::attributes, void (caulk::concurrent::details::worker_thread::*)(), std::__1::tuple<caulk::concurrent::details::worker_thread*>>>(void*)","symbolLocation":96,"imageIndex":14},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":10},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":10}]},{"id":2779306,"name":"caulk.messenger.shared:high","threadState":{"x":[{"value":14},{"value":59907},{"value":59907},{"value":11},{"value":4294967295},{"value":0},{"value":0},{"value":0},{"value":0},{"value":4294967295},{"value":1},{"value":105553143367320},{"value":0},{"value":0},{"value":0},{"value":0},{"value":18446744073709551580},{"value":8159103816},{"value":0},{"value":105553163554080},{"value":105553163554080},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6728025744},"cpsr":{"value":2147487744},"fp":{"value":6101380992},"sp":{"value":6101380960},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556293104},"far":{"value":0}},"frames":[{"imageOffset":6128,"symbol":"semaphore_wait_trap","symbolLocation":8,"imageIndex":5},{"imageOffset":9872,"symbol":"caulk::semaphore::timed_wait(double)","symbolLocation":212,"imageIndex":14},{"imageOffset":9540,"symbol":"caulk::concurrent::details::worker_thread::run()","symbolLocation":36,"imageIndex":14},{"imageOffset":8772,"symbol":"void* caulk::thread_proxy<std::__1::tuple<caulk::thread::attributes, void (caulk::concurrent::details::worker_thread::*)(), std::__1::tuple<caulk::concurrent::details::worker_thread*>>>(void*)","symbolLocation":96,"imageIndex":14},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":10},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":10}]},{"id":2779347,"name":"caulk::deferred_logger","threadState":{"x":[{"value":14},{"value":105553169636119},{"value":0},{"value":6101954663},{"value":105553169636096},{"value":22},{"value":0},{"value":0},{"value":0},{"value":4294967295},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":18446744073709551580},{"value":8159103816},{"value":0},{"value":105553165959224},{"value":105553165959224},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6728025744},"cpsr":{"value":2147487744},"fp":{"value":6101954432},"sp":{"value":6101954400},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556293104},"far":{"value":0}},"frames":[{"imageOffset":6128,"symbol":"semaphore_wait_trap","symbolLocation":8,"imageIndex":5},{"imageOffset":9872,"symbol":"caulk::semaphore::timed_wait(double)","symbolLocation":212,"imageIndex":14},{"imageOffset":9540,"symbol":"caulk::concurrent::details::worker_thread::run()","symbolLocation":36,"imageIndex":14},{"imageOffset":8772,"symbol":"void* caulk::thread_proxy<std::__1::tuple<caulk::thread::attributes, void (caulk::concurrent::details::worker_thread::*)(), std::__1::tuple<caulk::concurrent::details::worker_thread*>>>(void*)","symbolLocation":96,"imageIndex":14},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":10},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":10}]},{"triggered":true,"id":2779348,"name":"com.apple.audio.IOThread.client","threadState":{"x":[{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":1},{"value":7308604897303421292},{"value":1648},{"value":12438137323146341619},{"value":12438137326777359603},{"value":1114112},{"value":4555002368},{"value":4470098488},{"value":0},{"value":0},{"value":4470087596},{"value":328},{"value":8159114048},{"value":0},{"value":6},{"value":6102528000},{"value":93699},{"value":6102528224},{"value":4555019272,"symbolLocation":0,"symbol":"std::panicking::HOOK::hfb24478288288360"},{"value":4463385080,"symbolLocation":13040576,"symbol":"CopyShaderGLES3::_init()::_fragment_code"},{"value":4463385200,"symbolLocation":13040696,"symbol":"CopyShaderGLES3::_init()::_fragment_code"},{"value":105553169622896},{"value":56},{"value":1}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6556556480},"cpsr":{"value":1073745920},"fp":{"value":6102522640},"sp":{"value":6102522608},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556328156,"matchesCrashFrame":1},"far":{"value":0}},"frames":[{"imageOffset":41180,"symbol":"__pthread_kill","symbolLocation":8,"imageIndex":5},{"imageOffset":27840,"symbol":"pthread_kill","symbolLocation":288,"imageIndex":10},{"imageOffset":485952,"symbol":"abort","symbolLocation":180,"imageIndex":15},{"imageOffset":1730504,"symbol":"std::sys::pal::unix::abort_internal::h7fdb07780559b948","symbolLocation":12,"imageIndex":3},{"imageOffset":1723260,"symbol":"rust_panic","symbolLocation":96,"imageIndex":3},{"imageOffset":1722316,"symbol":"std::panicking::rust_panic_with_hook::h84760468187ddc85","symbolLocation":1640,"imageIndex":3},{"imageOffset":1720624,"symbol":"std::panicking::begin_panic_handler::_$u7b$$u7b$closure$u7d$$u7d$::he666a5eb600a7203","symbolLocation":156,"imageIndex":3},{"imageOffset":1716124,"symbol":"std::sys_common::backtrace::__rust_end_short_backtrace::h592f44d2bf9f843f","symbolLocation":12,"imageIndex":3},{"imageOffset":1719976,"symbol":"rust_begin_unwind","symbolLocation":52,"imageIndex":3},{"imageOffset":1859292,"symbol":"core::panicking::panic_fmt::h98bbf7bdf4994454","symbolLocation":52,"imageIndex":3},{"imageOffset":77332,"sourceLine":59,"sourceFile":"multi_threaded.rs","symbol":"_$LT$godot_core..storage..multi_threaded..InstanceStorage$LT$T$GT$$u20$as$u20$godot_core..storage..instance_storage..Storage$GT$::get::_$u7b$$u7b$closure$u7d$$u7d$::hea28d49ff90ea4a7","imageIndex":3,"symbolLocation":284},{"imageOffset":25144,"sourceLine":1431,"sourceFile":"result.rs","symbol":"core::result::Result$LT$T$C$E$GT$::unwrap_or_else::h9ea077b64d085698","imageIndex":3,"symbolLocation":100},{"imageOffset":77036,"sourceLine":58,"sourceFile":"multi_threaded.rs","symbol":"_$LT$godot_core..storage..multi_threaded..InstanceStorage$LT$T$GT$$u20$as$u20$godot_core..storage..instance_storage..Storage$GT$::get::h7c2ca18de40b5f98","imageIndex":3,"symbolLocation":76},{"imageOffset":19724,"sourceLine":54,"sourceFile":"lib.rs","symbol":"_$LT$godot_test_video_stream..TestVideoStreamPlayback$u20$as$u20$godot_core..obj..traits..cap..ImplementsGodotVirtual$GT$::__virtual_call::virtual_fn::_$u7b$$u7b$closure$u7d$$u7d$::h0541188b41008e63","imageIndex":3,"symbolLocation":48},{"imageOffset":67648,"sourceLine":250,"sourceFile":"function.rs","symbol":"core::ops::function::FnOnce::call_once::h071b773611be4c55","imageIndex":3,"symbolLocation":28},{"imageOffset":81824,"sourceLine":367,"sourceFile":"signature.rs","symbol":"_$LT$$LP$R$C$$RP$$u20$as$u20$godot_core..builtin..meta..signature..PtrcallSignatureTuple$GT$::in_ptrcall::h493cd4b87417cd1b","imageIndex":3,"symbolLocation":56},{"imageOffset":97824,"sourceLine":54,"sourceFile":"lib.rs","symbol":"_$LT$godot_test_video_stream..TestVideoStreamPlayback$u20$as$u20$godot_core..obj..traits..cap..ImplementsGodotVirtual$GT$::__virtual_call::virtual_fn::hc9de74f3db269d1b","imageIndex":3,"symbolLocation":124},{"imageOffset":47018656,"imageIndex":4},{"imageOffset":38632932,"imageIndex":4},{"imageOffset":48207684,"imageIndex":4},{"imageOffset":48202596,"imageIndex":4},{"imageOffset":19668488,"imageIndex":4},{"imageOffset":1064004,"imageIndex":1},{"imageOffset":44920,"imageIndex":1},{"imageOffset":1355708,"symbol":"caulk::expected<unsigned int, int> caulk::function_ref<caulk::expected<unsigned int, int> (ACAudioSpan&)>::functor_invoker<acv2::AudioConverterV2::fillComplexBuffer(int (*)(OpaqueAudioConverter*, unsigned int*, AudioBufferList*, AudioStreamPacketDescription**, void*), void*, unsigned int*, AudioBufferList*, AudioStreamPacketDescription*, AudioStreamPacketDependencyInfo*)::$_2>(caulk::details::erased_callable<caulk::expected<unsigned int, int> (ACAudioSpan&)> const&, ACAudioSpan&)","symbolLocation":172,"imageIndex":16},{"imageOffset":619580,"symbol":"acv2::AudioConverterChain::ObtainInput(acv2::AudioConverterBase&, unsigned int)","symbolLocation":552,"imageIndex":16},{"imageOffset":2638800,"symbol":"acv2::CBRConverter::ProduceOutput(ACAudioSpan&)","symbolLocation":52,"imageIndex":16},{"imageOffset":616688,"symbol":"acv2::AudioConverterChain::ProduceOutput(caulk::function_ref<caulk::expected<unsigned int, int> (ACAudioSpan&)>, ACBaseAudioSpan&)","symbolLocation":180,"imageIndex":16},{"imageOffset":1354416,"symbol":"acv2::AudioConverterV2::fillComplexBuffer(int (*)(OpaqueAudioConverter*, unsigned int*, AudioBufferList*, AudioStreamPacketDescription**, void*), void*, unsigned int*, AudioBufferList*, AudioStreamPacketDescription*, AudioStreamPacketDependencyInfo*)","symbolLocation":908,"imageIndex":16},{"imageOffset":1367112,"symbol":"with_resolved(OpaqueAudioConverter*, caulk::function_ref<int (AudioConverterAPI*)>)","symbolLocation":60,"imageIndex":16},{"imageOffset":1368336,"symbol":"AudioConverterFillComplexBuffer","symbolLocation":88,"imageIndex":16},{"imageOffset":43380,"imageIndex":1},{"imageOffset":1087964,"imageIndex":1},{"imageOffset":60552,"imageIndex":1},{"imageOffset":2014972,"symbol":"HALC_ProxyIOContext::IOWorkLoop()","symbolLocation":9244,"imageIndex":17},{"imageOffset":2003888,"symbol":"invocation function for block in HALC_ProxyIOContext::HALC_ProxyIOContext(unsigned int, unsigned int)","symbolLocation":108,"imageIndex":17},{"imageOffset":3573092,"symbol":"HALC_IOThread::Entry(void*)","symbolLocation":88,"imageIndex":17},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":10},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":10}]},{"id":2779398,"frames":[{"imageOffset":20588,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":5},{"imageOffset":30204,"symbol":"_pthread_cond_wait","symbolLocation":1228,"imageIndex":10},{"imageOffset":79068,"symbol":"std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)","symbolLocation":28,"imageIndex":11},{"imageOffset":16806056,"imageIndex":4},{"imageOffset":16805716,"imageIndex":4},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":10},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":10}],"threadState":{"x":[{"value":260},{"value":0},{"value":37632},{"value":0},{"value":0},{"value":160},{"value":0},{"value":0},{"value":6103101096},{"value":0},{"value":105553154665048},{"value":2},{"value":0},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8159113976},{"value":0},{"value":105553154665024},{"value":105553154665088},{"value":6103101664},{"value":0},{"value":0},{"value":37632},{"value":37633},{"value":37888},{"value":1},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6556558844},"cpsr":{"value":1610616832},"fp":{"value":6103101216},"sp":{"value":6103101072},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6556307564},"far":{"value":0}}}],
+  "usedImages" : [
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4988485632,
+    "CFBundleShortVersionString" : "810.0",
+    "CFBundleIdentifier" : "com.apple.cmio.DAL.VDC-4",
+    "size" : 294912,
+    "uuid" : "76675a9c-f00f-38c3-acee-baa34b109ccc",
+    "path" : "\/System\/Library\/Frameworks\/CoreMediaIO.framework\/Versions\/A\/Resources\/VDC.plugin\/Contents\/MacOS\/VDC",
+    "name" : "VDC",
+    "CFBundleVersion" : "423.1"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4985913344,
+    "CFBundleShortVersionString" : "1.14",
+    "CFBundleIdentifier" : "com.apple.audio.units.Components",
+    "size" : 1277952,
+    "uuid" : "06275638-4d71-370d-bf96-b30a567270e1",
+    "path" : "\/System\/Library\/Components\/CoreAudio.component\/Contents\/MacOS\/CoreAudio",
+    "name" : "CoreAudio",
+    "CFBundleVersion" : "1.14"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4486201344,
+    "size" : 49152,
+    "uuid" : "7778e0d7-361a-378d-9438-3b2bb48c2154",
+    "path" : "\/usr\/lib\/libobjc-trampolines.dylib",
+    "name" : "libobjc-trampolines.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4552605696,
+    "size" : 2375680,
+    "uuid" : "5349a234-fd9c-3eff-bb73-1d91fa9a0ff7",
+    "path" : "\/Users\/USER\/*\/libgodot_test_video_stream.dylib",
+    "name" : "libgodot_test_video_stream.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4374659072,
+    "CFBundleShortVersionString" : "4.2.2",
+    "CFBundleIdentifier" : "org.godotengine.godot",
+    "size" : 95453184,
+    "uuid" : "7a2d9d8b-a941-35f2-9c8e-c9ce84acd78f",
+    "path" : "\/Applications\/Godot.app\/Contents\/MacOS\/Godot",
+    "name" : "Godot",
+    "CFBundleVersion" : "4.2.2"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6556286976,
+    "size" : 241664,
+    "uuid" : "ca94fc21-bc40-3b43-b65d-b87ece9e1d48",
+    "path" : "\/usr\/lib\/system\/libsystem_kernel.dylib",
+    "name" : "libsystem_kernel.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6554767360,
+    "size" : 290816,
+    "uuid" : "a53d555d-f748-3010-83fe-385c660a81bd",
+    "path" : "\/usr\/lib\/system\/libdispatch.dylib",
+    "name" : "libdispatch.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6692462592,
+    "CFBundleShortVersionString" : "1.11",
+    "CFBundleIdentifier" : "com.apple.QuartzCore",
+    "size" : 3969024,
+    "uuid" : "4a615554-86bd-36e4-aab6-39c377bdae2c",
+    "path" : "\/System\/Library\/Frameworks\/QuartzCore.framework\/Versions\/A\/QuartzCore",
+    "name" : "QuartzCore",
+    "CFBundleVersion" : "1110.6"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6552858624,
+    "size" : 607048,
+    "uuid" : "324e4ad9-e01f-3183-b09f-3e20b326643a",
+    "path" : "\/usr\/lib\/dyld",
+    "name" : "dyld"
+  },
+  {
+    "size" : 0,
+    "source" : "A",
+    "base" : 0,
+    "uuid" : "00000000-0000-0000-0000-000000000000"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6556528640,
+    "size" : 53236,
+    "uuid" : "a7d94c96-7b1f-3229-9bea-048d037c3292",
+    "path" : "\/usr\/lib\/system\/libsystem_pthread.dylib",
+    "name" : "libsystem_pthread.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6555590656,
+    "size" : 581624,
+    "uuid" : "375254eb-5a65-35d0-b6b4-773e6763d289",
+    "path" : "\/usr\/lib\/libc++.1.dylib",
+    "name" : "libc++.1.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6556950528,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.CoreFoundation",
+    "size" : 5079040,
+    "uuid" : "47e4ec09-8f6e-30a8-99d0-34024d4f8122",
+    "path" : "\/System\/Library\/Frameworks\/CoreFoundation.framework\/Versions\/A\/CoreFoundation",
+    "name" : "CoreFoundation",
+    "CFBundleVersion" : "2202"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6615797760,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.AppKit",
+    "size" : 20033536,
+    "uuid" : "f3527312-e426-3f7c-b77b-2bf49d1b7c04",
+    "path" : "\/System\/Library\/Frameworks\/AppKit.framework\/Versions\/C\/AppKit",
+    "name" : "AppKit",
+    "CFBundleVersion" : "2487.30.108"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6728015872,
+    "CFBundleShortVersionString" : "1.0",
+    "CFBundleIdentifier" : "com.apple.audio.caulk",
+    "size" : 172032,
+    "uuid" : "25e50b84-b506-3db7-9a91-3824b9b8b880",
+    "path" : "\/System\/Library\/PrivateFrameworks\/caulk.framework\/Versions\/A\/caulk",
+    "name" : "caulk"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6555070464,
+    "size" : 520188,
+    "uuid" : "ab8a0a0b-9a1e-3284-9243-5a0334468ae5",
+    "path" : "\/usr\/lib\/system\/libsystem_c.dylib",
+    "name" : "libsystem_c.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6591004672,
+    "CFBundleShortVersionString" : "1.0",
+    "CFBundleIdentifier" : "com.apple.audio.AudioToolboxCore",
+    "size" : 3567616,
+    "uuid" : "14797936-70f3-3bd2-9473-325590aa8cdf",
+    "path" : "\/System\/Library\/PrivateFrameworks\/AudioToolboxCore.framework\/Versions\/A\/AudioToolboxCore",
+    "name" : "AudioToolboxCore"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6596624384,
+    "CFBundleShortVersionString" : "5.0",
+    "CFBundleIdentifier" : "com.apple.audio.CoreAudio",
+    "size" : 7286784,
+    "uuid" : "2c54c60c-a5af-39f4-8286-0cb88fa43367",
+    "path" : "\/System\/Library\/Frameworks\/CoreAudio.framework\/Versions\/A\/CoreAudio",
+    "name" : "CoreAudio",
+    "CFBundleVersion" : "5.0"
+  }
+],
+  "sharedCache" : {
+  "base" : 6552109056,
+  "size" : 4061216768,
+  "uuid" : "f9ddd844-7f3f-34bd-be29-f0c72d5e5449"
+},
+  "vmSummary" : "ReadOnly portion of Libraries: Total=1.3G resident=0K(0%) swapped_out_or_unallocated=1.3G(100%)\nWritable regions: Total=1.6G written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=1.6G(100%)\n\n                                VIRTUAL   REGION \nREGION TYPE                        SIZE    COUNT (non-coalesced) \n===========                     =======  ======= \nAccelerate framework               128K        1 \nActivity Tracing                   256K        1 \nCG image                           448K        7 \nColorSync                          544K       26 \nCoreAnimation                      384K       24 \nCoreGraphics                        48K        3 \nCoreUI image data                 1248K        9 \nFoundation                          16K        1 \nFoundation (reserved)               16K        1         reserved VM address space (unallocated)\nKernel Alloc Once                   32K        1 \nMALLOC                             1.6G       70 \nMALLOC guard page                  384K       24 \nSTACK GUARD                       56.3M       20 \nStack                             18.1M       20 \nVM_ALLOCATE                        704K       19 \nVM_ALLOCATE (reserved)              32K        1         reserved VM address space (unallocated)\n__AUTH                            1008K      218 \n__AUTH_CONST                      17.3M      388 \n__CTF                               824        1 \n__DATA                            6402K      379 \n__DATA_CONST                      22.0M      395 \n__DATA_DIRTY                      1029K      125 \n__FONT_DATA                          4K        1 \n__LINKEDIT                       899.2M        6 \n__OBJC_RO                         71.1M        1 \n__OBJC_RW                         2168K        1 \n__TEXT                           450.9M      410 \ndyld private memory                656K        4 \nmapped file                      244.0M       35 \nshared memory                      976K       17 \n===========                     =======  ======= \nTOTAL                              3.4G     2209 \nTOTAL, minus reserved VM space     3.4G     2209 \n",
+  "legacyInfo" : {
+  "threadTriggered" : {
+    "name" : "com.apple.audio.IOThread.client"
+  }
+},
+  "logWritingSignature" : "1bff0dd8e227af13275c3afc529a4ce2610abf00",
+  "trialInfo" : {
+  "rollouts" : [
+    {
+      "rolloutId" : "652eff3d1bce5442b8d753c9",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000009
+    },
+    {
+      "rolloutId" : "61675b89201f677a9a4cbd65",
+      "factorPackIds" : {
+        "HEALTH_FEATURE_AVAILABILITY" : "65287aa4be905e686a05f0a2"
+      },
+      "deploymentId" : 240000079
+    }
+  ],
+  "experiments" : [
+    {
+      "treatmentId" : "2dffbe18-a39a-4f33-ada9-2cce30af39ca",
+      "experimentId" : "6384d56b96e8d228551ec182",
+      "deploymentId" : 400000032
+    }
+  ]
+}
+}
+
